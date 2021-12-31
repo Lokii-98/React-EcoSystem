@@ -1,0 +1,20 @@
+import React, { useState } from "react";
+import "./NewTodoForm.css";
+
+const NewTodoForm = () => {
+  const [inputValue, SetInputValue] = useState("");
+  return (
+    <div className="new-todo-form">
+      <input
+        type="text"
+        className="new-todo-input"
+        placeholder="Enter new todo "
+        value={inputValue}
+        onChange={(e) => SetInputValue(e.target.value)}
+      />
+      <button className="new-todo-button">Create Todo</button>
+    </div>
+  );
+};
+
+export default NewTodoForm;
